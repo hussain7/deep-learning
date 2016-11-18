@@ -21,8 +21,7 @@ with open(pickle_file, 'rb') as f:
   print('Training set', train_dataset.shape, train_labels.shape)
   print('Validation set', valid_dataset.shape, valid_labels.shape)
   print('Test set', test_dataset.shape, test_labels.shape)
-
-
+  
 #Reformat into a shape that's more adapted to the models we're going to train:
 #data as a flat matrix,
 #labels as float 1-hot encodings.
@@ -175,7 +174,6 @@ with tf.Session(graph=graph) as session:
         valid_prediction.eval(), valid_labels))
   print("Test accuracy: %.1f%%" % accuracy(test_prediction.eval(), test_labels))
 
-
 #Turn the logistic regression example with SGD into a 1-hidden layer neural network with rectified linear units (nn.relu()) and
 # 1024 hidden nodes. This model should improve your validation / test accuracy.
 
@@ -240,15 +238,3 @@ with tf.Session(graph=graph) as session:
             print("Validation accuracy: %.1f%%" % accuracy(
                 valid_prediction.eval(), valid_labels))
     print("Test accuracy: %.1f%%" % accuracy(test_prediction.eval(), test_labels))
-
-
-
-
-
-
-
-
-
-
-
-
