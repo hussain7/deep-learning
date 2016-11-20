@@ -9,6 +9,7 @@ from six.moves import range
 #First reload the data we generated in 1_notmnist.ipynb.
 pickle_file = 'notMNIST.pickle'
 
+
 with open(pickle_file, 'rb') as f:
   save = pickle.load(f)
   train_dataset = save['train_dataset']
